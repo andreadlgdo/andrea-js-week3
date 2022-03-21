@@ -1,7 +1,7 @@
 {
-  "name": "hackabos",
+  "name": "starter-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "HTML + CSS starter project",
   "main": "index.js",
   "scripts": {
     "start": "browser-sync start --server 'www' --files 'www'",
