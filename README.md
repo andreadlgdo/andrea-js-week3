@@ -46,4 +46,6 @@
 
 # Task for this week
 
-Creating your own personal website, it can have multiple sections.
+Creating your own personal website, it can have multiple sections. 
+
+Try using semantic HTML elements, `grid` and `flex` in the process.
