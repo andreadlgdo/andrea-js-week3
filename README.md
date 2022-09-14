@@ -38,8 +38,6 @@
 
 [MDN](https://developer.mozilla.org/en-US/)
 
-[w3schools](https://www.w3schools.com/)
-
 [Can I use?](https://caniuse.com/)
 
 [CSS-tricks](https://css-tricks.com/)
