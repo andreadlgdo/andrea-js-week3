@@ -36,10 +36,63 @@ body{
 }
 
 .main {
-    padding: 2rem 4rem;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 98% 2%;
+    grid-template-areas:
+    "aside section"
+    "pagination pagination";
 }
 .section{
+    grid-area: section;
+    padding: 4rem 8rem;
+}
+.section1{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+.section_img{
+    display: flex;
+    justify-content: center;
+}
+.section_info{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+.aside{
+    grid-area: aside;
+    padding: 2rem 2rem;
+    border-right: solid grey;
+}
+.aside_list{
+    list-style: none;
+}
+.section_pagination{
+    grid-area: pagination;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+.pagination{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.pagination_item1{
+    background: powderblue;
+}
+.pagination li button{
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.pagination li button:hover{
+    background: azure;
+}

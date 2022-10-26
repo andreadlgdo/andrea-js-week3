@@ -1,29 +1,43 @@
 'use strict';
+async function getAllCharacters() {
+  const response = await fetch('https://rickandmortyapi.com/api/character');
+  const results = await response.json();
+  return results;
+}
 
+getAllCharacters().then(allCharacteres=>{
+  console.log(allCharacteres);
+  document.querySelector('.section').innerHTML='';
+  const all=allCharacteres.results;
+  crearCharacters(all);
+});
 async function data(query) {
-  const response = await fetch('https://rickandmortyapi.com/api/character', {})
+  const response = await fetch('https://rickandmortyapi.com/api/character', {});
   const data = await response.json();
   const results = data.results.filter(character => character.name.includes(query));
   return results;
 }
 
+// eslint-disable-next-line no-unused-vars
 function getValor(){
-  document.querySelector('.main').innerHTML='';
+  document.querySelector('.section').innerHTML='';
   const prueba=document.getElementById('buscar').value;
   data(prueba).then(all=>{
-    console.log(all);
-    for(let i=0;i<all.length;i++){
-      createSection();
-      createImageCharacter(i,all);
-      createSection2(i);
-      createNameCharacter(i,all);
-      createList(i,all);
-      crearEspacio();
-      crearLinea();
-      crearEspacio();
-    }
+    crearCharacters(all);
   });
-};
+}
+function crearCharacters(all){
+  for(let i=0;i<all.length;i++){
+    createSection();
+    createImageCharacter(i,all);
+    createSection2(i);
+    createNameCharacter(i,all);
+    createList(i,all);
+    crearEspacio();
+    crearLinea();
+    crearEspacio();
+  }
+}
 function createList(i,all){
   createTypeList(i);
   createGender(i,all);
@@ -71,22 +85,22 @@ function createNumerOfEpisodes(i,characters){
 }
 function createSection(){
   let newElement=document.createElement('section');
-  newElement.className='section';
-  document.querySelector('.main').append(newElement);
+  newElement.className='section1';
+  document.querySelector('.section').append(newElement);
 }
 function crearEspacio(){
   let newElement=document.createElement('br');
-  document.querySelector('.main').append(newElement);
+  document.querySelector('.section').append(newElement);
 }
 function crearLinea(){
   let newElement=document.createElement('hr');
-  document.querySelector('.main').append(newElement);
+  document.querySelector('.section').append(newElement);
 }
 function createSection2(i){
   let newElement=document.createElement('section');
   newElement.className='section_info';
   document.querySelector('.main').append(newElement);
-  document.getElementsByClassName('section').item(i).append(newElement);
+  document.getElementsByClassName('section1').item(i).append(newElement);
 }
 function createNameCharacter(i,characters){
   let newElement=document.createElement('h2');
@@ -104,5 +118,26 @@ function createImageCharacter(i,characters){
   newElement.src=characters[i].image;
   newElement.alt=characters[i].name;
   newElement.className='section_img';
-  document.getElementsByClassName('section').item(i).append(newElement);
+  document.getElementsByClassName('section1').item(i).append(newElement);
+}
+// eslint-disable-next-line no-unused-vars
+function haciaDelante(){
+  let j=document.querySelector('.pagination').children[1].textContent;
+  for(let i=0;i<7;i++){
+    document.querySelector('.pagination_item'+j).textContent=(parseInt(j)+7);
+    document.querySelector('.pagination_item'+j).className='pagination_item'+(parseInt(j)+7);
+    j++;
+  }
+}
+// eslint-disable-next-line no-unused-vars
+function haciaAtras(){
+  let j=document.querySelector('.pagination').children[1].textContent;
+  if(parseInt(j)!==1){
+    for(let i=0;i<7;i++){
+      document.querySelector('.pagination_item'+j).textContent=(parseInt(j)-7);
+      document.querySelector('.pagination_item'+j).className='pagination_item'+(parseInt(j)-7);
+      j++;
+    }
+  }
+
 }
