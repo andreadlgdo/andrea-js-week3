@@ -4,9 +4,9 @@
   "description": "HTML + CSS starter project",
   "main": "index.js",
   "scripts": {
-    "start": "browser-sync start --server 'www' --files 'www'",
-    "lint": "eslint \"./www/\"",
-    "prettier": "prettier --write \"./www/\""
+    "start": "browser-sync start --server 'src' --files 'src'",
+    "lint": "eslint \\\"src/\\\"",
+    "prettier": "prettier --write \\\"src/\\\""
   },
   "keywords": [],
   "author": "",

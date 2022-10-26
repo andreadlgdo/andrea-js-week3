@@ -1,0 +1,26 @@
+body{
+    margin: 0rem;
+
+}
+.header{
+    display: flex;
+    background: cadetblue;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.header_rick-morty{
+    font-family: Athelas;
+    font-size: 5rem;
+}
+.main {
+    padding: 2rem 4rem;
+}
+.section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section_name{
+
+}
