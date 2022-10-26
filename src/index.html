@@ -13,12 +13,15 @@
 <body>
     <header class="header">
         <h1 class="header_rick-morty">RICK & MORTY</h1>
+        <nav class="header_nav">
+            <form class="header_form">
+                <label class="form_label" for="buscar">Buscar personajes:</label>
+                <input class="form_search" type="text" name="buscar" id="buscar" placeholder="Search for a character by name">
+                <input class="form_button" type="button" value="Buscar" onclick="getValor()">
+            </form>
+        </nav>
     </header>
-    <form>
-        <label for="buscar">Buscar personajes:</label>
-        <input type="text" name="buscar" id="buscar" placeholder="Busca un personaje">
-        <input type="button" value="Buscar" onclick="getValor()">
-    </form>
+
     <main class="main">
 
     </main>
