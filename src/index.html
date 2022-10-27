@@ -30,66 +30,30 @@
             </ul>
             <br><hr><br>
             <h3>Filters</h3>
-            <ul class="aside_list">
-                <li>Characters
                     <ul class="aside_list">
                         <li>Species</li>
                         <ul class="aside_list">
-                            <li><input type="checkbox"/>Human</li>
-                            <li><input type="checkbox"/>Alien</li>
-                            <li><input type="checkbox"/>Humanoid</li>
-                            <li><input type="checkbox"/>Poopybutthole</li>
-                            <li><input type="checkbox"/>Mythological Creature</li>
+                            <li><input type="checkbox" onclick="filterby('species','Human')"/>Human</li>
+                            <li><input type="checkbox" onclick="filterby('species','Alien')"/>Alien</li>
+                            <li><input type="checkbox" onclick="filterby('species','Humanoid')"/>Humanoid</li>
+                            <li><input type="checkbox" onclick="filterby('species','Poopybutthole')"/>Poopybutthole</li>
+                            <li><input type="checkbox" onclick="filterby('species','Mythological Creature')"/>Mythological Creature</li>
                         </ul>
                         <li>Gender</li>
                         <ul class="aside_list">
-                            <li><input type="checkbox"/>Male</li>
-                            <li><input type="checkbox"/>Female</li>
-                        </ul>
-                        <li>Origin</li>
-                        <ul class="aside_list">
-                            <li><input type="checkbox"/>Earth</li>
-                            <li><input type="checkbox"/>Abadango</li>
-                            <li><input type="checkbox"/>Nuptia 4</li>
-                            <li><input type="checkbox"/>Bepis 9</li>
-                            <li><input type="checkbox"/>Venzenulon 7</li>
-                            <li><input type="checkbox"/>Purge Planet</li>
-                            <li><input type="checkbox"/>Post-Apocalyptic Earth</li>
-                            <li><input type="checkbox"/>Signus 5 Expanse</li>
-                            <li><input type="checkbox"/>Fantasy World</li>
-                            <li><input type="checkbox"/>Bird World</li>
-                            <li><input type="checkbox"/>Hideout Planet</li>
-                            <li><input type="checkbox"/>The Menagerie</li>
-                        </ul>
-                        <li>Location</li>
-                        <ul class="aside_list">
-                            <li><input type="checkbox"/>Citadel of Ricks</li>
-                            <li><input type="checkbox"/>Earth</li>
-                            <li><input type="checkbox"/>Abadango</li>
-                            <li><input type="checkbox"/>Testicle Monster Dimension</li>
-                            <li><input type="checkbox"/>Worldender's lair</li>
-                            <li><input type="checkbox"/>Anatomy Park</li>
-                            <li><input type="checkbox"/>Interdimensional Cable</li>
-                            <li><input type="checkbox"/>Nuptia 4</li>
-                            <li><input type="checkbox"/>Bepis 9</li>
-                            <li><input type="checkbox"/>Venzenulon 7</li>
-                            <li><input type="checkbox"/>Purge Planet</li>
-                            <li><input type="checkbox"/>Post-Apocalyptic Earth</li>
-                            <li><input type="checkbox"/>mmortality Field Resort</li>
-                            <li><input type="checkbox"/>Fantasy World</li>
-                            <li><input type="checkbox"/>Planet Squanch</li>
+                            <li><input type="checkbox" onclick="filterby('gender','Male')"/>Male</li>
+                            <li><input type="checkbox" onclick="filterby('gender','Female')"/>Female</li>
                         </ul>
                         <li>Status</li>
                         <ul class="aside_list">
-                            <li><input type="checkbox"/>Alive</li>
-                            <li><input type="checkbox"/>Dead</li>
-                            <li><input type="checkbox"/>Unknown</li>
+                            <li><input type="checkbox" onclick="filterby('status','Alive')"/>Alive</li>
+                            <li><input type="checkbox" onclick="filterby('status','Dead')"/>Dead</li>
+                            <li><input type="checkbox" onclick="filterby('status','Unknown')"/>Unknown</li>
                         </ul>
                     </ul>
                 </li>
-                <li>Locations</li>
-                <li>Episodes</li>
-            </ul>
+                <button onclick="filter()">Aplicar filtros</button>
+
         </aside>
         <section class="section">
 
