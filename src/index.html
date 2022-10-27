@@ -12,7 +12,7 @@
 
 <body>
     <header class="header">
-        <h1 class="header_rick-morty">RICK & MORTY</h1>
+       <div class="header_div"><img src="images/title.png" class="header_rick-morty" alt="rick and morty"></div>
         <nav class="header_nav">
             <form class="header_form">
                 <label class="form_label" for="buscar">Buscar personajes:</label>
@@ -25,10 +25,10 @@
     <main class="main">
         <aside class="aside">
             <h3>Rick And Morty</h3>
-            <ul class="aside_list">
-                <li>All Characters</li>
-                <li>Locations</li>
-                <li>Episodes</li>
+            <ul class="aside_list-1">
+                <li ><button class="aside_items-list1" onclick="getCharacters()">All Characters</button></li>
+                <li ><button class="aside_items-list1" onclick="getLocations()">Locations</button></li>
+                <li><button class="aside_items-list1">Episodes</button></li>
             </ul>
             <br><hr><br>
             <h3>Filters</h3>
@@ -99,18 +99,24 @@
 
         <section class="section_pagination">
             <ul class="pagination">
-                <li><button class="pagination_item-atras" onclick="haciaAtras()">«</button></li>
-                <li><button class="pagination_item1">1</button></li>
-                <li><button class="pagination_item2">2</button></li>
-                <li><button class="pagination_item3">3</button></li>
-                <li><button class="pagination_item4">4</button></li>
-                <li><button class="pagination_item5">5</button></li>
-                <li><button class="pagination_item6">6</button></li>
-                <li><button class="pagination_item7">7</button></li>
-                <li><button class="pagination_item-alante" onclick="haciaDelante()">»</button></li>
+             <!--   <li><button class="pagination_item-atras" onclick="haciaAtras()">«</button></li>-->
+                <li><button class="pagination_item1" onclick="cambiarPagina(1)">1</button></li>
+                <li><button class="pagination_item2" onclick="cambiarPagina(2)">2</button></li>
+                <li><button class="pagination_item3" onclick="cambiarPagina(3)">3</button></li>
+                <li><button class="pagination_item4" onclick="cambiarPagina(4)">4</button></li>
+                <li><button class="pagination_item5" onclick="cambiarPagina(5)">5</button></li>
+                <li><button class="pagination_item6" onclick="cambiarPagina(6)">6</button></li>
+                <li><button class="pagination_item7" onclick="cambiarPagina(7)">7</button></li>
+                <!--<li><button class="pagination_item-alante" onclick="haciaDelante()">»</button></li>-->
             </ul>
+
         </section>
+
     </main>
+    <br><br>
+    <footer class="footer">
+        <p>Create by Andrea Delgado</p>
+    </footer>
 </body>
 
 </html>

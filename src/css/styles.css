@@ -4,22 +4,25 @@ body{
 }
 .header{
     display: grid;
-    grid-template-rows: 70% 30%;
-    background: cadetblue;
-
+    grid-template-areas: "title" "search";
+}
+.header_div{
+    grid-area: title;
+    background: powderblue;
 }
 .header_rick-morty{
-    display: flex;
-    font-family: Athelas;
-    font-size: 5rem;
-    justify-content: center;
-    align-items: center;
+    height: 17rem;
+    width: 100%;
 }
 .header_nav{
+    grid-area: search;
     display: flex;
     justify-content: left;
     align-items: center;
     padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background: powderblue;
 }
 .form_search{
     height: 1.7rem;
@@ -82,9 +85,10 @@ body{
     align-items: center;
     flex-direction: row;
 }
-.pagination_item1{
-    background: powderblue;
+.pagination li .pagination_item1{
+    border: 4px solid powderblue;
 }
+
 .pagination li button{
     color: black;
     padding: 8px 16px;
@@ -95,4 +99,38 @@ body{
 
 .pagination li button:hover{
     background: azure;
+}
+.section_title-not-found{
+    font-size: xxx-large;
+    font-family: serif;
+    font-weight: lighter;
+}
+.section_image-not-found{
+    border-radius: 30%;
+}
+.footer{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: powderblue;
+}
+.aside_list-1{
+    list-style: none;
+}
+.aside_items-list1{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    border:none;
+    height: 3rem;
+    width: 12rem;
+    background: aliceblue;
+    margin-bottom: 1rem;
+}
+.aside_items-list1:hover{
+    background: powderblue;
+}
+.aside_items-list1:visited{
+    background: green;
 }
