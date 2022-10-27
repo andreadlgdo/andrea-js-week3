@@ -11,11 +11,9 @@ getAllCharacters().then(allCharacteres=>{
   crearCharacters(all);
 });
 
-let search='character';
 
 // eslint-disable-next-line no-unused-vars
 function getCharacters(){
-  search='character';
   getAllCharacters().then(allCharacteres=>{
     document.querySelector('.section').innerHTML='';
     const all=allCharacteres.results;
@@ -23,29 +21,6 @@ function getCharacters(){
   });
 }
 
-async function getAllLocations() {
-  const response = await fetch('https://rickandmortyapi.com/api/location');
-  const results = await response.json();
-  return results;
-}
-
-// eslint-disable-next-line no-unused-vars
-function getLocations(){
-  search='location';
-  getAllLocations().then(allLocations=>{
-    document.querySelector('.section').innerHTML='';
-    document.querySelector('.section').innerHTML='';
-    const all=allLocations.results;
-    for(let i=0;i<all.length;i++){
-      let newElem=document.createElement('h3');
-      newElem=all[i].name;
-      document.querySelector('.section').append(newElem);
-      crearEspacio();
-      crearLinea();
-      crearEspacio();
-    }
-  });
-}
 
 async function data(query) {
   const response = await fetch('https://rickandmortyapi.com/api/character', {});
@@ -55,7 +30,7 @@ async function data(query) {
 }
 
 async function findByPage(query) {
-  const response = await fetch('https://rickandmortyapi.com/api/'+search+'/?page='+query, {});
+  const response = await fetch('https://rickandmortyapi.com/api/character/?page='+query, {});
   const data = await response.json();
   return data;
 }
@@ -72,9 +47,6 @@ function cambiarPagina(valor){
   findByPage(valor).then(all=>{
     if(all.results.length===0){
       crearNoCharacteres();
-    }
-    if(search==='location'){
-
     }else{
       crearCharacters(all.results);
     }
