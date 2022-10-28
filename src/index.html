@@ -32,23 +32,24 @@
             <h3>Filters</h3>
                     <ul class="aside_list">
                         <li>Species</li>
+
                         <ul class="aside_list">
-                            <li><input type="checkbox" onclick="filterby('species','Human')"/>Human</li>
-                            <li><input type="checkbox" onclick="filterby('species','Alien')"/>Alien</li>
-                            <li><input type="checkbox" onclick="filterby('species','Humanoid')"/>Humanoid</li>
-                            <li><input type="checkbox" onclick="filterby('species','Poopybutthole')"/>Poopybutthole</li>
-                            <li><input type="checkbox" onclick="filterby('species','Mythological Creature')"/>Mythological Creature</li>
+                            <li><input type="radio" name="specie" onclick="filterby('species','Human')"/>Human</li>
+                            <li><input type="radio" name="specie" onclick="filterby('species','Alien')"/>Alien</li>
+                            <li><input type="radio" name="specie" onclick="filterby('species','Humanoid')"/>Humanoid</li>
+                            <li><input type="radio" name="specie" onclick="filterby('species','Poopybutthole')"/>Poopybutthole</li>
+                            <li><input type="radio" name="specie" onclick="filterby('species','Mythological Creature')"/>Mythological Creature</li>
                         </ul>
                         <li>Gender</li>
                         <ul class="aside_list">
-                            <li><input type="checkbox" onclick="filterby('gender','Male')"/>Male</li>
-                            <li><input type="checkbox" onclick="filterby('gender','Female')"/>Female</li>
+                            <li><input type="radio" name="gender" onclick="filterby('gender','Male')"/>Male</li>
+                            <li><input type="radio" name="gender" onclick="filterby('gender','Female')"/>Female</li>
                         </ul>
                         <li>Status</li>
                         <ul class="aside_list">
-                            <li><input type="checkbox" onclick="filterby('status','Alive')"/>Alive</li>
-                            <li><input type="checkbox" onclick="filterby('status','Dead')"/>Dead</li>
-                            <li><input type="checkbox" onclick="filterby('status','Unknown')"/>Unknown</li>
+                            <li><input type="radio" name="status" onclick="filterby('status','Alive')"/>Alive</li>
+                            <li><input type="radio" name="status" onclick="filterby('status','Dead')"/>Dead</li>
+                            <li><input type="radio" name="status" onclick="filterby('status','Unknown')"/>Unknown</li>
                         </ul>
                     </ul>
                 </li>

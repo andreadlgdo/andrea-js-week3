@@ -21,6 +21,7 @@ async function getCharactersByFilter(type,valor) {
   return results;
 }
 
+
 // eslint-disable-next-line no-unused-vars
 function  filterby(type,valor){
   getCharactersByFilter(type,valor).then(allCharacteres=>{
