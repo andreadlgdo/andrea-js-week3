@@ -3,6 +3,7 @@ body{
 
 }
 .header{
+    margin: 0rem;
     display: grid;
     grid-template-areas: "title" "search";
 }
@@ -42,8 +43,9 @@ body{
 }
 
 .main {
+    margin: 0rem;
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 30% 70%;
     grid-template-rows: 98% 2%;
     grid-template-areas:
     "aside section"
@@ -51,15 +53,21 @@ body{
 }
 .section{
     grid-area: section;
-    padding: 4rem 8rem;
+    padding: 4rem;
+    margin-right: 1rem;
 }
 .section1{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.section_img{
+
+.section_div-img{
     display: flex;
     justify-content: center;
+
+}
+.section_img{
+    border-radius: 20%;
 }
 .section_info{
     display: flex;
@@ -127,19 +135,21 @@ body{
     align-items: center;
     background: powderblue;
 }
-.aside_list-1{
-    list-style: none;
-}
+
 .aside_items-list1{
     display: flex;
     justify-content: center;
-    margin-left: 4rem;
     padding: 1rem;
     border:none;
     height: 3rem;
     width: 12rem;
     background: aliceblue;
-    margin-bottom: 1rem;
+}
+.aside_all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .aside_items-list1:hover{
     background: powderblue;
@@ -164,11 +174,11 @@ body{
 .aside_rick\&morty{
     display: flex;
     justify-content: center;
-    font-size: 2rem;
-    font-family: serif;
+    font-size: 2.5rem;
+    font-family: Copperplate;
 }
 .aside_filters{
     font-size: 1.5rem;
-    font-family: serif;
+    font-family: Copperplate;
 }
 

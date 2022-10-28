@@ -7,6 +7,9 @@ async function getAllCharacters() {
 
 getAllCharacters().then(allCharacteres=>{
   document.querySelector('.section').innerHTML='';
+  for(let k=1;k<8;k++){
+    document.querySelector('.pagination_item'+k).disabled=false;
+  }
   const all=allCharacteres.results;
   crearCharacters(all);
 });
@@ -77,12 +80,18 @@ function filter(){
     });
   }
   document.querySelectorAll('.aside_radio').forEach((x) => x.checked=false);
+  for(let k=1;k<8;k++){
+    document.querySelector('.pagination_item'+k).disabled=true;
+  }
   filters='';
 }
 // eslint-disable-next-line no-unused-vars
 function getCharacters(){
   getAllCharacters().then(allCharacteres=>{
     document.querySelector('.section').innerHTML='';
+    for(let k=1;k<8;k++){
+      document.querySelector('.pagination_item'+k).disabled=false;
+    }
     const all=allCharacteres.results;
     crearCharacters(all);
   });
@@ -113,6 +122,7 @@ function cambiarPagina(valor){
   pagAnterior=valor;
   document.querySelector('.pagination_item'+pagAnterior).style.borderRadius= '5px';
   document.querySelector('.pagination_item'+pagAnterior).style.border= '4px solid powderblue';
+
   findByPage(valor).then(all=>{
     if(all.results.length===0){
       crearNoCharacteres();
@@ -132,6 +142,10 @@ function getValor(){
     }
     crearCharacters(all);
   });
+  document.querySelector('.form_search').value='';
+  for(let k=1;k<8;k++){
+    document.querySelector('.pagination_item'+k).disabled=true;
+  }
 }
 function crearNoCharacteres(){
   let imgNotFound=document.createElement('img');
@@ -142,6 +156,9 @@ function crearNoCharacteres(){
   imgNotFound.className='section_image-not-found';
   document.querySelector('.section').append(titleNoFound);
   document.querySelector('.section').append(imgNotFound);
+  for(let k=1;k<8;k++){
+    document.querySelector('.pagination_item'+k).disabled=true;
+  }
 }
 function crearCharacters(all){
   for(let i=0;i<all.length;i++){
@@ -232,10 +249,13 @@ function createTypeList(i){
 }
 function createImageCharacter(i,characters){
   let newElement=document.createElement('img');
+  let newDiv=document.createElement('div');
+  newDiv.className='section_div-img';
   newElement.src=characters[i].image;
   newElement.alt=characters[i].name;
   newElement.className='section_img';
-  document.getElementsByClassName('section1').item(i).append(newElement);
+  document.getElementsByClassName('section1').item(i).append(newDiv);
+  document.getElementsByClassName('section_div-img').item(i).append(newElement);
 }
 
 /*
