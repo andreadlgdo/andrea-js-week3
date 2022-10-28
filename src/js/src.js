@@ -2,7 +2,6 @@
 async function getAllCharacters() {
   const response = await fetch('https://rickandmortyapi.com/api/character');
   const results = await response.json();
-  console.log(results);
   return results;
 }
 
@@ -14,25 +13,70 @@ getAllCharacters().then(allCharacteres=>{
 
 let filters='';
 
-async function getCharactersByFilter(type,valor) {
+async function getCharactersByFilterOneFilter(type,valor) {
   const response = await fetch('https://rickandmortyapi.com/api/character/?'+type+'='+valor);
   const results = await response.json();
 
   return results;
 }
+async function getCharactersByFilter2Filter(types,valores) {
+  const response = await fetch('https://rickandmortyapi.com/api/character/?'+types[0]+'='+valores[0]+'&'
+      +types[1]+'='+valores[1]);
+  const results = await response.json();
 
+  return results;
+}
+async function getCharactersByFilter3Filter(types,valores) {
+  const response = await fetch('https://rickandmortyapi.com/api/character/?'+types[0]+'='+valores[0]+'&'
+      +types[1]+'='+valores[1]+'&'+types[2]+'='+valores[2]);
+  const results = await response.json();
 
+  return results;
+}
+let types=new Array();
+let valores=new Array();
+let j=0;
 // eslint-disable-next-line no-unused-vars
 function  filterby(type,valor){
-  getCharactersByFilter(type,valor).then(allCharacteres=>{
-    filters = allCharacteres.results;
+  for (let i=0;i<types.length;i++){
+    console.log(types[i]);
+    console.log(valores[i]);
+    if(types[i]===type){
+      valores[i]=valor;
+      console.log(valores[i]);
+    }
+  }
+  types[j]=type;
+  valores[j]=valor;
+  j++;
 
-  });
 }
 // eslint-disable-next-line no-unused-vars
 function filter(){
   document.querySelector('.section').innerHTML='';
-  crearCharacters(filters);
+  console.log(types);
+  console.log(valores);
+  if(types.length===1){
+    getCharactersByFilterOneFilter(types[0],valores[0]).then(allCharacteres=>{
+      console.log(allCharacteres);
+      filters = allCharacteres.results;
+      console.log(filters);
+      crearCharacters(filters);
+    });
+  }else if (types.length===2){
+    getCharactersByFilter2Filter(types,valores).then(allCharacteres=>{
+      filters = allCharacteres.results;
+      console.log(filters);
+      crearCharacters(filters);
+    });
+  }else{
+    getCharactersByFilter3Filter(types,valores).then(allCharacteres=>{
+      filters = allCharacteres.results;
+      console.log(filters);
+      crearCharacters(filters);
+    });
+  }
+  document.querySelectorAll('.aside_radio').forEach((x) => x.checked=false);
   filters='';
 }
 // eslint-disable-next-line no-unused-vars
