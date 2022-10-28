@@ -34,8 +34,11 @@ body{
     font-family: sans-serif;
 }
 .form_button{
-    height: 1.7rem;
+    height: 2rem;
     width: 5rem;
+    border: none;
+    margin-left: 1rem;
+    background: white;
 }
 
 .main {
@@ -66,7 +69,7 @@ body{
 .aside{
     grid-area: aside;
     padding: 2rem 2rem;
-    border-right: solid grey;
+    background: white;
 }
 .aside_list{
     list-style: none;
@@ -77,6 +80,15 @@ body{
     justify-content: center;
     align-items: center;
 
+}
+.aside_aplicar-filtros{
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 1rem;
+    height: 2.5rem;
+    width: 14rem;
+    background: powderblue;
+    border:none;
 }
 .pagination{
     display: flex;
@@ -121,6 +133,7 @@ body{
 .aside_items-list1{
     display: flex;
     justify-content: center;
+    margin-left: 4rem;
     padding: 1rem;
     border:none;
     height: 3rem;
@@ -134,3 +147,28 @@ body{
 .aside_items-list1:visited{
     background: green;
 }
+.aside_item-title{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    margin-right: 2rem;
+    background: aliceblue;
+}
+.aside_radio-item{
+    border-radius: 50px;
+    color: black;
+    padding: 0.3em 0.6em;
+    font-size: 1em;
+    margin-bottom: 1rem;
+}
+
+.aside_rick\&morty{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: serif;
+}
+.aside_filters{
+    font-size: 1.5rem;
+    font-family: serif;
+}
+

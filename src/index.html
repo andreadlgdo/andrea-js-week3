@@ -17,43 +17,43 @@
             <form class="header_form">
                 <label class="form_label" for="buscar">Buscar personajes:</label>
                 <input class="form_search" type="text" name="buscar" id="buscar" placeholder="Search for a character by name">
-                <input class="form_button" type="button" value="Buscar" onclick="getValor()">
+                <input class="form_button" type="button" value="buscar" onclick="getValor()">
             </form>
         </nav>
     </header>
 
     <main class="main">
         <aside class="aside">
-            <h3>Rick And Morty</h3>
+            <h3 class="aside_rick&morty">Rick And Morty</h3>
             <ul class="aside_list-1">
                 <li ><button class="aside_items-list1" onclick="getCharacters()">All Characters</button></li>
             </ul>
             <br><hr><br>
-            <h3>Filters</h3>
+            <h3 class="aside_filters">Filters</h3>
                     <ul class="aside_list">
-                        <li>Species</li>
+                        <li class="aside_item-title">Species</li>
 
                         <ul class="aside_list">
-                            <li><input type="radio" name="specie" class="aside_radio" onclick="filterby('species','Human')"/>Human</li>
-                            <li><input type="radio" name="specie" class="aside_radio" onclick="filterby('species','Alien')"/>Alien</li>
-                            <li><input type="radio" name="specie" class="aside_radio" onclick="filterby('species','Humanoid')"/>Humanoid</li>
-                            <li><input type="radio" name="specie" class="aside_radio" onclick="filterby('species','Poopybutthole')"/>Poopybutthole</li>
-                            <li><input type="radio" name="specie" class="aside_radio" onclick="filterby('species','Mythological Creature')"/>Mythological Creature</li>
+                            <li class="aside_radio-item"><input type="radio" name="specie" class="aside_radio" onclick="filterby('species','Human')"/>Human</li>
+                            <li class="aside_radio-item"><input type="radio" name="specie" class="aside_radio" onclick="filterby('species','Alien')"/>Alien</li>
+                            <li class="aside_radio-item"><input type="radio" name="specie" class="aside_radio" onclick="filterby('species','Humanoid')"/>Humanoid</li>
+                            <li class="aside_radio-item"><input type="radio" name="specie" class="aside_radio" onclick="filterby('species','Poopybutthole')"/>Poopybutthole</li>
+                            <li class="aside_radio-item"><input type="radio" name="specie" class="aside_radio" onclick="filterby('species','Mythological Creature')"/>Mythological Creature</li>
                         </ul>
-                        <li>Gender</li>
+                        <li class="aside_item-title">Gender</li>
                         <ul class="aside_list">
-                            <li><input type="radio" name="gender" class="aside_radio" onclick="filterby('gender','Male')"/>Male</li>
-                            <li><input type="radio" name="gender" class="aside_radio" onclick="filterby('gender','Female')"/>Female</li>
+                            <li class="aside_radio-item"><input type="radio" name="gender" class="aside_radio" onclick="filterby('gender','Male')"/>Male</li>
+                            <li class="aside_radio-item"><input type="radio" name="gender" class="aside_radio" onclick="filterby('gender','Female')"/>Female</li>
                         </ul>
-                        <li>Status</li>
+                        <li class="aside_item-title">Status</li>
                         <ul class="aside_list">
-                            <li><input type="radio" name="status" class="aside_radio" onclick="filterby('status','Alive')"/>Alive</li>
-                            <li><input type="radio" name="status" class="aside_radio" onclick="filterby('status','Dead')"/>Dead</li>
-                            <li><input type="radio" name="status" class="aside_radio" onclick="filterby('status','Unknown')"/>Unknown</li>
+                            <li class="aside_radio-item"><input type="radio" name="status" class="aside_radio" onclick="filterby('status','Alive')"/>Alive</li>
+                            <li class="aside_radio-item"><input type="radio" name="status" class="aside_radio" onclick="filterby('status','Dead')"/>Dead</li>
+                            <li class="aside_radio-item"><input type="radio" name="status" class="aside_radio" onclick="filterby('status','Unknown')"/>Unknown</li>
                         </ul>
                     </ul>
                 </li>
-                <button onclick="filter()">Aplicar filtros</button>
+                <button class="aside_aplicar-filtros" onclick="filter()">Aplicar filtros</button>
 
         </aside>
         <section class="section">
